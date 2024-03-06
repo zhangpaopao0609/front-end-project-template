@@ -7,14 +7,19 @@
   //   ".gitignore": ".gitmodules",
   //   ".eslintrc.js": "commitlint.config.js, stylelint.config.js",
   // },
+  
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
+
+  // json 文件自动识别为 jsonc
   "files.associations": {
       "*.json": "jsonc"
   },
+
+  // 注释相关设置：注释高亮 ! todo ??
   "better-comments.highlightPlainText": true,
   "better-comments.tags": [
     {
