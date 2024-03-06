@@ -4,4 +4,5 @@ export default antfu({
   stylistic: {
     semi: true,
   },
+  ignores: ['tsconfig.json'],
 });
