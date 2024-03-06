@@ -1,36 +1,36 @@
 {
   "name": "front-end-project-template",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@8.6.12",
-  "version": "0.0.1",
   "description": "front end project basic template",
-  "type": "module",
-  "homepage": "https://github.com/zhangpaopao0609/front-end-project-template",
-  "bugs": {
-    "url": "https://github.com/zhangpaopao0609/front-end-project-template/issues"
-  },
-  "license": "MIT",
   "author": "zhangpaopao0609",
+  "license": "MIT",
+  "homepage": "https://github.com/zhangpaopao0609/front-end-project-template",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhangpaopao0609/front-end-project-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangpaopao0609/front-end-project-template/issues"
   },
   "engines": {
     "node": "^14.18.0 || >=16.10.0"
   },
   "scripts": {
-    "test": "",
-    "start": "",
-    "build": "",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.8.0",
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2"
   },
   "lint-staged": {
-    
+    "*": "eslint . --fix"
   }
 }

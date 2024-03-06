@@ -7,16 +7,52 @@
   //   ".gitignore": ".gitmodules",
   //   ".eslintrc.js": "commitlint.config.js, stylelint.config.js",
   // },
-  
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
+
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
   ],
 
   // json 文件自动识别为 jsonc
   "files.associations": {
-      "*.json": "jsonc"
+    "*.json": "jsonc"
   },
 
   // 注释相关设置：注释高亮 ! todo ??
@@ -57,6 +93,6 @@
       "backgroundColor": "transparent",
       "bold": false,
       "italic": false
-    },
+    }
   ]
 }
