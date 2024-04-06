@@ -9,6 +9,15 @@ export default antfu({
       // 'style/nonblock-statement-body-position': ['off', 'below'],
     },
   },
+
+  formatters: {
+    markdown: true,
+  },
+
+  vue: true,
+  markdown: true,
+  typescript: true,
+
   ignores: ['tsconfig.json'],
   rules: {
     // https://eslint.org/docs/latest/rules/curly
